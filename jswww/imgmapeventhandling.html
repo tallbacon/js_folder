@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>image Map Event Handling</title>
+  <script type="text/javascript">
+  <!-- 
+  firstTimeOnHead=true
+  function onHead() {
+    if(firstTimeOnHead) {
+      alert("You're on my head!") 
+      firstTimeOnHead=false
+    }
+  }
+  function myEye() {
+    alert("Be careful or you'll poke out my eye!")
+  }
+  function myNose() {
+    alert("Aaaachhoooo")
+  }
+  function myMouth() {
+    alert("Fet out of my mouth!")
+  }
+  //->
+  </script>
+</head>
+
+<body>
+<h1>Image Map Event handling</h1>
+<img src="blockman.gif" usermap="#blockman">
+<map name="blockman">
+<area coords="80,88,20,125" href="ch04-10.htm" onMouseOver="myEye()">
+<area coords="169,88,208,125" href="ch04-10.htm" onMouseOver="myEye()">
+<area coords="124,147,65,181" href="ch04-10.htm" onMouseOver="myNose()">
+<area coords="92,210,192,228" href="ch04-10.htm" onMouseOver="myMouth()">
+<area coords="6,4,292,266" href="ch04-10.htm" onMouseOver="myHead()">
+</map></body>
+</html>

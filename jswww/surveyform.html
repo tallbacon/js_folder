@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Button and Check Box events</title>
+<script type="text/javascript">
+function showResults() {
+  var reultMsg""
+  if(document.survey.age[0].checked) resultMsg+="under 30, "
+  if(document.survey.age[1].checked) resultMsg+="between 30 and 60, "
+  if(document.survey.age[2].checked) resultMsg+="over 60"
+  if(document.survey.sex[0].checked) resultMsg+="male, "
+  if(document.survey.sex[1].checked) resultMsg+="female, "
+  if(document.survey.reading.checked) resultMsg+="reading, "
+  if(document.survey.eating.checked) resultMsg+="eating, "
+  document.survey.results.value=resultMsg
+}
+ function upperCaseResults() {
+  var newResults=document.survey.results.value
+  document.survey.results.value=newResults.toUpperCase()
+ }
+ //-></script>
+</head>
+<body>
+
+<form name="survey">
+<h2 align="center">Survey Form</h2>
+<p><b>Age:</b>
+<input type="radio" Name="age" value="under30" 
+  onClick="showResults()">Under30
+<input type="radio" Name="age" value="30to60" 
+  onClick="showResults()">30 - 60
+<input type="radio" Name="age" value="over60" 
+  onClick="showResults()">Over 60 </p>
+  <p><b>Sex:</b>
+<input type="radio" Name="sex" value="male" 
+  onClick="showResults()">male
+  <input type="radio" Name="sex" value="female"
+  onClick="showResults()">female</p>
+<p><b>Interests:</b>
+<input type="checkbox" Name="reading" value="reading" 
+  onClick="showResults()">Reading
+<input type="checkbox" Name="eating" value="eating" 
+  onClick="showResults()">Eating
+  <input type="checkbox" Name="sleeping" value="sleeping" 
+  onClick="showResults()">Sleeping</p>
+<p>
+<input type="" Name="makeUpper" 
+  value="To Upper Case" onClick="upperCaseResults()"></p>
+  <p><b>Results: </b><input type="test" Name="results" size="50"></p>
+<input type="Submit" Name="submit" Value="Submit"
+  onClick='return confirm("Sure?")'> 
+<input type="Reset" Name="reset"
+  onClick='return confirm("Sure?")'>
+  </form>
+</body>
+</html>

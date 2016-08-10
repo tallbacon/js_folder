@@ -1,0 +1,27 @@
+<HTML> 
+<head> 
+<script language="Javascript">
+
+<!-- 
+var CurrentMsg = "Welcome To webgimmicks.com.. This is an example for scrolling message....   Try
+
+other examples in this site also...    Enjoy your visit !!";
+
+var CurrentPosition = 0; 
+function MessageScroll() {
+
+   status = CurrentMsg.substring(CurrentPosition, CurrentMsg.length)  + CurrentMsg.substring(0,
+
+CurrentPosition); 
+   CurrentPosition++; 
+   if (CurrentPosition > CurrentMsg.length) CurrentPosition = 0; 
+// set timeout for next update 
+   window.setTimeout("MessageScroll()",100); 
+} 
+// Start the scrolling message 
+MessageScroll(); 
+// --> 
+</script> 
+</head> 
+Check the status bar ... You should be seeing a scrolling message 
+</html>

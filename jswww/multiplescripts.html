@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Multiple Scripts</title>
+</head>
+
+<script type="text/javascript">
+  <!-- Hide script from older browsers 
+hasFlash = false
+for (i=0; i<navigator.plugins.length; i++) {
+  if navigator.plugins[i].name.indexOf("Flash") >= 0) {
+  hasFlash = true 
+  }
+}
+
+
+function saySomethin(message) {
+alert(message)
+}
+
+//End hiding script from older browsers -->
+
+</script>
+<body BGcolor=white>
+  <h2>
+  <script type="text/javascript">
+  <!--Hide script form older browsers 
+  if(hasFlash) {
+    document.write("You have flash, you lucky person you!")
+}
+else {
+  document.write("Sorry, you don't have flash; maybe next time.")
+}
+//End hiding script form older browsers --> 
+    </script>
+    <HR>
+      Famous Presidential Quotes 
+    </HR>
+    </h2>
+  <form>
+    <input type=button value="Lincoln" onClick="saySomething(;Four score and seven years ago....')">
+    <input type=button value="Kennedy" onClick="saySomething('Ask not what your country can do for you...')">
+    <input type=button value="Nixon" onClick="saySomething('I am not a crook')">
+  </form>
+
+</body>
+</html>

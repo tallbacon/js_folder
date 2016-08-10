@@ -1,0 +1,26 @@
+<html><head><title>a simple rollover</title>
+<script type="text/javascript">
+<!-- Hide script from old browsers
+if (documeny.images) {
+  arrowRed = new image
+  arrowBlue = new image
+  arrowRed.src = "images/redArrow.gif"
+  arrowblue.src = "images/blueArrow.gif"
+}
+else 
+{
+  arrowRed = ""
+  arrowblue = ""
+  document.arrow = ""
+}
+//End of script from old browsers-->
+</script>
+
+</head>
+<body BGcolor=white>
+<a href="jspg.html"
+onMouseover="document.arrow.src=arrowRed.src"
+onMouseout="document.arrow.src=arrowBlue.src">
+<IMG src="images/blueArrow.gif" width=147 height=82 border=0 NAME="arrow"></a>
+</body>
+</html>

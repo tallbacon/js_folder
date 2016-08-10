@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>My Javascript Page</title>
+
+<script type="text/javascript">
+<!-- Hide this script from older browsers 
+myMsg = "Hey I know Js - check out my kewl scroller"
+i = 0 
+
+function scrollMsg() {
+  window.status = 
+  myMsg.substring(i,myMsg.length) + 
+  myMsg.substring(0,i-1)
+  if (i < myMsg.length) {
+    i++
+  }
+  else {
+    i = 0 
+  }
+  setTimeout("scrollMsg()",50)
+}
+
+//End hiding script from old browsers -->
+
+</script>
+</head>
+<body BGcolor=WHITE onLoad="scrollMsg()">
+  <h2>I'm a kwel JS dood with a scrolling status bar!</h2>
+</body>
+</html>

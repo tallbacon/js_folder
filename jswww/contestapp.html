@@ -1,0 +1,62 @@
+<html>
+<head>
+<title> This is a Contest Application form </title>
+<script type="text/javascript">
+function nameSelect() {
+  if(is Blank(""+document.contest.last.value)) {
+    document.contest.last.value="Surname"
+    document.contest.last.focus()
+    document.contest.last.select()
+  }
+}
+function isBlank(s) {
+  var len=s.length
+  var i 
+  for(i=0; i<len;++i) {
+    if(s.charAt(i)!=" " ) return false
+  }
+return true 
+}
+function validate(fieldName,fieldValue) {
+  if(isBlank(fieldValue)) {
+    alert(fieldName+" cannot be left blank.")
+    return false 
+  }
+  return true 
+}
+function validateEmail() {
+  validate("The email field", document.contest.email.value)
+}
+function validateEssay() {
+  validate("The essay field", document.contest.essay.value)
+}
+function validateForm() {
+if(!validate("the last name field", document.contest.last.value))
+return false 
+if(!validate("The email field", document.contest.email.value))
+return false
+if(!validate("The essay field", document.contest.essay.value))
+return false
+}
+//-></script>
+<body>
+<form name="contest" onSubmit="return validateForm()">
+<h2 align="center">Contest Application </h2>
+
+<p>Last Name:
+<input type="text" Name="last" size="16" onChange="nameSelect()">
+First Name: 
+<input type="text" Name="first" size="12">
+Middle Initial: 
+<input type="text" Name="initial" size="8"></p>
+<p>
+  Email Address:
+  <input type="text" Name="email" size="32" onChange="validateEmail()"></p>
+<textarea Name="essay" rows="5" cols="40" onChange="validateEssay()"></textarea>
+<p>Submit your winning entry: 
+<input type="Submit" Name="go" value="Make me a winner!"></p>
+
+</form>
+</body>
+</head>
+</html>

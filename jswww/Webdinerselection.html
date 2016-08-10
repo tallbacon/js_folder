@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Handling Selection List Events</title>
+<script type="text/javascript"><!--
+function updateOrder() {
+  var orderString=""
+  var n=document.diner.entries.length
+  for(i=0;i<n;++i) {
+    if(document.diner.entries.options[i].selected) {
+      orderString+=document.diner.entries.options[i].value+"\n"
+    }
+  }
+  document.diner.summary.value=orderString
+}
+//->
+</script>
+</head>
+<body>
+<form name="diner">
+<h2 align="center">The Web Diner</h2>
+<p><b>Place your Order: </b></p>
+<select name="entries" size="4" multiple="multiple"
+  onChange="updateOrder()">
+  <option value="Hamburger">Hamburger</option>
+  <option value="Hot Dog">Hot Dog</option>
+  <option value="Chicken Sandwich">Chicken Sandwich</option>  
+  <option value="BLT Sandwich">BLT Sandwich</option>
+  <option value="French Fries">French Fries</option>
+  <option value="Onion Rings">Onion Rings</option>
+  <option value="Soda">Soda</option>
+  <option value="Coffee">Coffee</option>
+  <option value="Spring Water">Mineral Water</option></select>
+  <p><b>You ordered: </b></p>
+  <p>
+    <textarea name="summary" rows="4" cols="20"></textarea>
+  </p>  
+  <p><input type="Submit" Name="order" Value="Let me have it"></p>
+</form>
+</body>
+
+</html>
