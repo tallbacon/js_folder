@@ -1,0 +1,21 @@
+<!-- stimulating event handler -->
+<html>
+<head><title>Stimulating Events</title>
+<script type="text/javascript"><!-
+function button1Clicked() {
+  document.test.button2.click()
+}
+function button2Clicked() {
+  alert("Button 2 was clicked!")
+}
+//-></script>
+</head>
+<body>
+<form name="test">
+<input type="button" Name="button1" value="button 1"
+  onClick="button1Clicked()">
+  <input type="button" Name="button2" value="button 2"
+    onClick="button2Clicked()">
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- this is a setting event handler. This one does not show anything on screen in the browser-->
+<html>
+<head>
+<title>
+  <script language="javascript"></title><!-
+  function handler1() {
+    document.test.result.value="Set by handler1"
+    document.test.clickMe.onClick=handler2
+  }
+  function handler2() {
+    document.test.result.value="Set by handler2"
+    document.test.clickMe.onClick=handler1
+  }
+  //-></script>
+</head>
+<body>
+  <form Name="test">
+    <input type="button" Name="clickMe" value="Click Me!">
+<p><input type="text" Name="result" size="20"></p>
+  </form>
+  <script language="javascript"><!--
+  document.test.clickMe.onClick=handler1
+  //-></script>
+</body>
+</html>
